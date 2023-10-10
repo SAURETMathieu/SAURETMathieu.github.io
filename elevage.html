@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elevage - Ajout</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/elevage.css" />
+    <link rel="shortcut icon" href="image/dd-icone.webp" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <nav>
+        <div class="header__part">
+          <div class="container">
+            <div class="header__flex">
+              <a class="logo" href="">
+                <img class="logo__image" src="image/dd-icone.webp" alt="" />
+                <span class="logo__title">Elevage</span>
+              </a>
+              <div class="menu">
+                <a class="menu__item" href="https://devdocs.io/javascript/"
+                  ><i class="fa-brands fa-readme darkmode"></i>
+                  <span class="menu__text">Sites</span></a
+                >
+                <a
+                  class="menu__item"
+                  href="https://kourou.oclock.io/"
+                  target="_blank"
+                >
+                  <svg
+                    class="kourou-svg svg-white"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="-14.691 -14.656 188 188"
+                  >
+                    <path
+                      d="M144.73 51.788c-12.773 0-23.13-10.356-23.13-23.13 0-5.044 1.62-9.707 4.36-13.508C112.88 5.61 96.74-.013 79.2-.013 35.11-.013.062 35.477.062 79.564.062 123.65 35.11 158.7 79.2 158.7c44.086 0 79.355-35.05 79.355-79.136 0-10.367-1.95-20.258-5.507-29.324-2.582.996-5.384 1.548-8.318 1.548zM79.2 123.43c-24.03 0-43.868-19.84-43.868-43.865 0-24.25 19.84-44.308 43.867-44.308 24.245 0 44.084 20.06 44.084 44.308 0 24.026-19.84 43.867-44.088 43.867l.004-.002z"
+                    ></path>
+                    <path
+                      d="M144.692.168c-15.828 0-28.41 12.74-28.41 28.568 0 15.828 12.582 28.41 28.41 28.41s28.49-12.582 28.49-28.41S160.52.168 144.692.168zm-.014 49.575c-11.49 0-20.98-9.488-20.98-20.98 0-11.595 9.49-21.188 20.98-21.188 11.597 0 21.085 9.593 21.085 21.19 0 11.49-9.488 20.978-21.085 20.978z"
+                    ></path>
+                  </svg>
+                  <span class="menu__text">Kourou</span></a
+                >
+                <a
+                  class="menu__item"
+                  href="https://app.slack.com/client"
+                  target="_blank"
+                  ><i class="fa-brands fa-slack darkmode"></i>
+                  <span class="menu__text">Slack</span></a
+                >
+                <a
+                  class="menu__item"
+                  href="https://developer.mozilla.org/en-US/"
+                  target="_blank"
+                  ><i class="icon-heart darkmode"></i>
+                  <span class="menu__text">MDN</span></a
+                >
+                <a class="menu__item" href="https://github.com/" target="_blank"
+                  ><i class="fa-brands fa-github darkmode"></i>
+                  <span class="menu__text">Github</span></a
+                >
+                <button
+                  id="settings-btn"
+                  class="btn"
+                  type="button"
+                  aria-label="Ouvrir les settings"
+                >
+                  <i class="fa-sharp fa-solid fa-gear"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__part">
+          <div class="container">
+            <div class="submenu">
+              <a class="submenu__item" href="index.html">Accueil</a>
+              <a class="submenu__item" href="tables.html">Roulette</a>
+              <a class="submenu__item" href="tableau.html">Tableaux</a>
+              <a class="submenu__item" href="elevage.html">Gestion</a>
+              <a
+                class="submenu__item submenu__item--current"
+                href="elevage.html"
+                >Elevage</a
+              >
+              <a class="submenu__item" href="trading.html">Crypto</a>
+              <a class="submenu__item" href="etables.html">O'clock</a>
+              <a class="submenu__item" href="htmldoc.html">HTML</a>
+              <a class="submenu__item" href="cssdoc.html">CSS</a>
+              <a class="submenu__item" href="jsdoc.html">JS</a>
+              <a class="submenu__item" href="games.html">Jeux</a>
+              <a class="submenu__item" href="games.html">Projets</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container">
+      <div class="sousmenu">
+        <a href="elevage.html">
+          <input
+            class="btn"
+            type="button"
+            name="dragodindes"
+            value="Dragodindes"
+        /></a>
+        <a href="naissance.html">
+          <input class="btn" type="button" name="submit" value="Naissances"
+        /></a>
+        <a href="etables.html">
+          <input class="btn" type="button" name="etables" value="Etables"
+        /></a>
+        <a href="etables2.html">
+          <input class="btn" type="button" name="etables2" value="Etables 2"
+        /></a>
+      </div>
+
+      <form id="formulaire" name="form1">
+        <div class="elevage__formulaire">
+          <div class="elevage__formulaire-haut">
+            <div class="error"></div>
+            <div class="formulaire__date">
+              <label class="date" for="date">
+                <h3>Date</h3>
+                <input name="date" type="date" id="date" value="" />
+              </label>
+              <label class="hours" for="heure">
+                <h3>Heures</h3>
+                <select name="heure" id="heure">
+                  <option value="0">00h</option>
+                  <option value="1">01h</option>
+                  <option value="2">02h</option>
+                  <option value="3">03h</option>
+                  <option value="4">04h</option>
+                  <option value="5">05h</option>
+                  <option value="6">06h</option>
+                  <option value="7">07h</option>
+                  <option value="8">08h</option>
+                  <option value="9">09h</option>
+                  <option value="10">10h</option>
+                  <option value="11">11h</option>
+                  <option value="12">12h</option>
+                  <option value="13">13h</option>
+                  <option value="14">14h</option>
+                  <option value="15">15h</option>
+                  <option value="16">16h</option>
+                  <option value="17">17h</option>
+                  <option value="18">18h</option>
+                  <option value="19">19h</option>
+                  <option value="20">20h</option>
+                  <option value="21">21h</option>
+                  <option value="22">22h</option>
+                  <option value="23">23h</option>
+                </select>
+              </label>
+
+              <label class="minutes" for="minute">
+                <h3>Minutes</h3>
+                <select name="minute" id="minute">
+                  <option value="00">00min</option>
+                  <option value="05">05min</option>
+                  <option value="10">10min</option>
+                  <option value="15">15min</option>
+                  <option value="20">20min</option>
+                  <option value="25">25min</option>
+                  <option value="30">30min</option>
+                  <option value="35">35min</option>
+                  <option value="40">40min</option>
+                  <option value="45">45min</option>
+                  <option value="50">50min</option>
+                  <option value="55">55min</option>
+                </select>
+              </label>
+
+              <label class="number" for="nombre">
+                <h3>Nombre</h3>
+                <select name="nombre" id="nombre">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
+                  <option value="16">16</option>
+                  <option value="17">17</option>
+                  <option value="18">18</option>
+                  <option value="19">19</option>
+                  <option value="20">20</option>
+                  <option value="21">21</option>
+                  <option value="22">22</option>
+                  <option value="23">23</option>
+                  <option value="24">24</option>
+                  <option value="25">25</option>
+                  <option value="26">26</option>
+                  <option value="27">27</option>
+                  <option value="28">28</option>
+                  <option value="29">29</option>
+                  <option value="30">30</option>
+                  <option value="31">31</option>
+                  <option value="32">32</option>
+                  <option value="33">33</option>
+                  <option value="34">34</option>
+                  <option value="35">35</option>
+                  <option value="36">36</option>
+                  <option value="37">37</option>
+                  <option value="38">38</option>
+                  <option value="39">39</option>
+                  <option value="40">40</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="formulaire__couleur-etable">
+              <h3 class="h3-center">Choix de l'étable :</h3>
+              <label for="cra">
+                <input
+                  type="radio"
+                  name="etable"
+                  id="cra"
+                  value="cra"
+                  checked="checked"
+                />
+                <font color="D38426">Cra </font>
+              </label>
+              <label for="rose">
+                <input type="radio" name="etable" id="rose" value="rose" />
+                <font color="EF12D7"> Rose</font>
+              </label>
+              <label for="bleu">
+                <input type="radio" name="etable" id="bleu" value="bleu" /><font
+                  color="012FFF"
+                  >Bleu</font
+                >
+              </label>
+              <label for="blanc">
+                <input
+                  type="radio"
+                  name="etable"
+                  id="blanc"
+                  value="blanc"
+                /><font color="white">Blanc</font>
+              </label>
+              <label for="rouge">
+                <input
+                  type="radio"
+                  name="etable"
+                  id="rouge"
+                  value="rouge"
+                /><font color="FA1503"> Rouge</font>
+              </label>
+              <label for="turquoise">
+                <input
+                  type="radio"
+                  name="etable"
+                  id="turquoise"
+                  value="turquoise"
+                />
+                <font color="01FAFA"> Turquoise</font>
+              </label>
+              <label for="noir">
+                <input type="radio" name="etable" id="noir" value="noir" />
+                <font color="000000"> Noir</font>
+              </label>
+              <label for="jaune">
+                <input type="radio" name="etable" id="jaune" value="jaune" />
+                <font color="DEF708"> Jaune</font>
+              </label>
+              <label for="vert">
+                <input type="radio" name="etable" id="vert" value="vert" />
+                <font color="green"> Vert</font>
+              </label>
+            </div>
+
+            <div class="formulaire__nom-specialite">
+              <section class="section-male">
+                <label>
+                  <h3 class="h3-specialite">aucune</h3>
+                  <input
+                    type="radio"
+                    name="specialitemale"
+                    value="aucune"
+                    checked="checked"
+                  />
+                </label>
+                <label>
+                  <h3 class="h3-specialite">repro</h3>
+                  <input type="radio" name="specialitemale" value="repro" />
+                </label>
+                <label>
+                  <h3 class="h3-specialite">camé</h3>
+                  <input type="radio" name="specialitemale" value="came" />
+                </label>
+              </section>
+              <section class="section-name">
+                <label class="text-name" for="male">
+                  <h3>Male</h3>
+                  <input name="male" type="text" id="male" value="" />
+                </label>
+
+                <label class="text-name" for="femelle">
+                  <h3>Femelle</h3>
+                  <input name="male" type="text" id="femelle" value="" />
+                </label>
+              </section>
+
+              <section class="section-femelle">
+                <label>
+                  <h3 class="h3-specialite">aucune</h3>
+                  <input
+                    type="radio"
+                    name="specialitefemelle"
+                    value="aucune"
+                    checked="checked"
+                  />
+                </label>
+                <label>
+                  <h3 class="h3-specialite">repro</h3>
+                  <input type="radio" name="specialitefemelle" value="repro" />
+                </label>
+                <label>
+                  <h3 class="h3-specialite">camé</h3>
+                  <input type="radio" name="specialitefemelle" value="came" />
+                </label>
+              </section>
+            </div>
+            <div class="formulaire__race"></div>
+          </div>
+
+          <div class="elevage__formulaire-milieu">
+            <div class="containers">
+              <h2 class="h2--type">Male</h2>
+            </div>
+            <div id="container__male">
+              <div class="container__3slot">
+                <div class="titre-dd">
+                  <h2>Stade 1</h2>
+                </div>
+                <div class="img-dd">
+                  <label class="img-input" for="male_couleur_rousse"
+                    ><img src="image/dinderousse.png" /><input
+                      type="radio"
+                      id="male_couleur_rousse"
+                      name="couleurmale"
+                      value="rousse"
+                      checked="checked"
+                  /></label>
+                  <label class="img-input" for="male_couleur_amande"
+                    ><img src="image/dindeamande.png" /><input
+                      id="male_couleur_amande"
+                      type="radio"
+                      name="couleurmale"
+                      value="amande"
+                  /></label>
+                  <label class="img-input" for="male_couleur_doree"
+                    ><img src="image/dindedoree.png" /><input
+                      id="male_couleur_doree"
+                      type="radio"
+                      name="couleurmale"
+                      value="doree"
+                  /></label>
+                </div>
+                <div class="input-dd"></div>
+              </div>
+
+              <div class="container__3slot">
+                <div class="titre-dd">
+                  <h2>Stade 2</h2>
+                </div>
+                <div class="img-dd">
+                  <label class="img-input" for="male_couleur_amanderousse"
+                    ><img src="image/dindeamanderousse.png" /><input
+                      id="male_couleur_amanderousse"
+                      type="radio"
+                      name="couleurmale"
+                      value="amanderousse"
+                  /></label>
+                  <label class="img-input" for="male_couleur_amandedoree"
+                    ><img src="image/dindeamandedoree.png" /><input
+                      id="male_couleur_amandedoree"
+                      type="radio"
+                      name="couleurmale"
+                      value="amandedoree"
+                  /></label>
+                  <label class="img-input" for="male_couleur_roussedoree"
+                    ><img src="image/dinderoussedoree.png" /><input
+                      id="male_couleur_roussedoree"
+                      type="radio"
+                      name="couleurmale"
+                      value="roussedoree"
+                  /></label>
+                </div>
+                <div class="input-dd"></div>
+              </div>
+
+              <div class="container__3slot">
+                <div class="titre-dd">
+                  <h2>Stade 3</h2>
+                </div>
+                <div class="img-dd">
+                  <label class="img-input" for="male_couleur_indigo"
+                    ><img src="image/dindeindigo.png" /><input
+                      id="male_couleur_indigo"
+                      type="radio"
+                      name="couleurmale"
+                      value="indigo"
+                  /></label>
+                  <label class="img-input" for="male_couleur_ebene"
+                    ><img src="image/dindeebene.png" /><input
+                      id="male_couleur_ebene"
+                      type="radio"
+                      name="couleurmale"
+                      value="ebene"
+                  /></label>
+                </div>
+                <div class="input-dd"></div>
+              </div>
+
+              <div class="container__3slot">
+                <div class="titre-dd">
+                  <h2>Stade 4</h2>
+                </div>
+                <div class="img-dd">
+                  <label class="img-input" for="male_couleur_ebeneindigo"
+                    ><img src="image/dindeebeneindigo.png" /><input
+                      id="male_couleur_ebeneindigo"
+                      type="radio"
+                      name="couleurmale"
+                      value="ebeneindigo"
+                  /></label>
+                </div>
+                <div class="input-dd"></div>
+              </div>
+
+              <div class="container__3slot">
+                <div class="titre-dd">
+                  <h2>Stade 5</h2>
+                </div>
+                <div class="img-dd">
+                  <label class="img-input" for="male_couleur_pourpre"
+                    ><img src="image/dindepourpre.png" /><input
+                      id="male_couleur_pourpre"
+                      type="radio"
+                      name="couleurmale"
+                      value="pourpre"
+                  /></label>
+                  <label class="img-input" for="male_couleur_orchidee"
+                    ><img src="image/dindeorchidee.png" /><input
+                      id="male_couleur_orchidee"
+                      type="radio"
+                      name="couleurmale"
+                      value="orchidee"
+                  /></label>
+                </div>
+                <div class="input-dd"></div>
+              </div>
+              <div class="container__3slot">
+                <div class="titre-dd">
+                  <h2>Stade 6</h2>
+                </div>
+                <div class="img-dd">
+                  <label class="img-input" for="male_couleur_ebeneorchidee"
+                    ><img src="image/dindeebeneorchidee.png" /><input
+                      type="radio"
+                      name="couleurmale"
+                      value="ebeneorchidee"
+                      id="male_couleur_ebeneorchidee"
+                  /></label>
+                  <label class="img-input" for="male_couleur_indigopourpre"
+                    ><img src="image/dindeindigopourpre.png" /><input
+                      type="radio"
+                      name="couleurmale"
+                      value="indigopourpre"
+                      id="male_couleur_indigopourpre"
+                  /></label>
+                  <label class="img-input" for="male_couleur_pourpreorchidee"
+                    ><img src="image/dindepourpreorchidee.png" /><input
+                      type="radio"
+                      name="couleurmale"
+                      value="pourpreorchidee"
+                      id="male_couleur_pourpreorchidee"
+                  /></label>
+                </div>
+                <div class="input-dd"></div>
+              </div>
+
+              <div class="container__3slot">
+                <div class="titre-dd">
+                  <h2>Stade 7</h2>
+                </div>
+                <div class="img-dd">
+                  <label class="img-input" for="male_couleur_turquoise"
+                    ><img src="image/dindeturquoise.png" /><input
+                      id="male_couleur_ivoire"
+                      type="radio"
+                      name="couleurmale"
+                      value="ivoire"
+                  /></label>
+                  <label class="img-input" for="male_couleur_ivoire"
+                    ><img src="image/dindeivoire.png" /><input
+                      id="male_couleur_turquoise"
+                      type="radio"
+                      name="couleurmale"
+                      value="turquoise"
+                  /></label>
+                </div>
+                <div class="input-dd"></div>
+              </div>
+
+              <div class="container__3slot">
+                <div class="titre-dd">
+                  <h2>Stade 8</h2>
+                </div>
+                <div class="img-dd">
+                  <label class="img-input" for="male_couleur_orchideeturquoise"
+                    ><img src="image/dindeorchideeturquoise.png" /><input
+                      type="radio"
+                      name="couleurmale"
+                      value="orchideeturquoise"
+                      id="male_couleur_orchideeturquoise"
+                  /></label>
+                  <label class="img-input" for="male_couleur_ivoirepourpre"
+                    ><img src="image/dindeivoirepourpre.png" /><input
+                      type="radio"
+                      name="couleurmale"
+                      value="ivoirepourpre"
+                      id="male_couleur_ivoirepourpre"
+                  /></label>
+                  <label class="img-input" for="male_couleur_ivoireturquoise"
+                    ><img src="image/dindeivoireturquoise.png" /><input
+                      type="radio"
+                      name="couleurmale"
+                      value="ivoireturquoise"
+                      id="male_couleur_ivoireturquoise"
+                  /></label>
+                </div>
+                <div class="input-dd"></div>
+              </div>
+
+              <div class="container__3slot">
+                <div class="titre-dd">
+                  <h2>Stade 9</h2>
+                </div>
+                <div class="img-dd">
+                  <label class="img-input" for="male_couleur_emeraude"
+                    ><img src="image/dindeemeraude.png" /><input
+                      id="male_couleur_emeraude"
+                      type="radio"
+                      name="couleurmale"
+                      value="emeraude"
+                  /></label>
+                  <label class="img-input" for="male_couleur_prune"
+                    ><img src="image/dindeprunes.png" /><input
+                      id="male_couleur_prune"
+                      type="radio"
+                      name="couleurmale"
+                      value="prune"
+                  /></label>
+                </div>
+                <div class="input-dd"></div>
+              </div>
+            </div>
+            <div class="containers">
+              <h2 class="h2--type">Femelle</h2>
+            </div>
+            <div id="container__femelle">
+              <div class="container__3slot">
+                <div class="titre-dd">
+                  <h2>Stade 1</h2>
+                </div>
+                <div class="img-dd">
+                  <label class="img-input" for="femelle_couleur_rousse"
+                    ><img src="image/dinderousse.png" /><input
+                      type="radio"
+                      id="femelle_couleur_rousse"
+                      name="couleurfemelle"
+                      value="rousse"
+                      checked="checked"
+                  /></label>
+                  <label class="img-input" for="femelle_couleur_amande"
+                    ><img src="image/dindeamande.png" /><input
+                      id="femelle_couleur_amande"
+                      type="radio"
+                      name="couleurfemelle"
+                      value="amande"
+                  /></label>
+                  <label class="img-input" for="femelle_couleur_doree"
+                    ><img src="image/dindedoree.png" /><input
+                      id="femelle_couleur_doree"
+                      type="radio"
+                      name="couleurfemelle"
+                      value="doree"
+                  /></label>
+                </div>
+                <div class="input-dd"></div>
+              </div>
+
+              <div class="container__3slot">
+                <div class="titre-dd">
+                  <h2>Stade 2</h2>
+                </div>
+                <div class="img-dd">
+                  <label class="img-input" for="femelle_couleur_amanderousse"
+                    ><img src="image/dindeamanderousse.png" /><input
+                      id="femelle_couleur_amanderousse"
+                      type="radio"
+                      name="couleurfemelle"
+                      value="amanderousse"
+                  /></label>
+                  <label class="img-input" for="femelle_couleur_amandedoree"
+                    ><img src="image/dindeamandedoree.png" /><input
+                      id="femelle_couleur_amandedoree"
+                      type="radio"
+                      name="couleurfemelle"
+                      value="amandedoree"
+                  /></label>
+                  <label class="img-input" for="femelle_couleur_roussedoree"
+                    ><img src="image/dinderoussedoree.png" /><input
+                      id="femelle_couleur_roussedoree"
+                      type="radio"
+                      name="couleurfemelle"
+                      value="roussedoree"
+                  /></label>
+                </div>
+                <div class="input-dd"></div>
+              </div>
+
+              <div class="container__3slot">
+                <div class="titre-dd">
+                  <h2>Stade 3</h2>
+                </div>
+                <div class="img-dd">
+                  <label class="img-input" for="femelle_couleur_indigo"
+                    ><img src="image/dindeindigo.png" /><input
+                      id="femelle_couleur_indigo"
+                      type="radio"
+                      name="couleurfemelle"
+                      value="indigo"
+                  /></label>
+                  <label class="img-input" for="femelle_couleur_ebene"
+                    ><img src="image/dindeebene.png" /><input
+                      id="femelle_couleur_ebene"
+                      type="radio"
+                      name="couleurfemelle"
+                      value="ebene"
+                  /></label>
+                </div>
+                <div class="input-dd"></div>
+              </div>
+
+              <div class="container__3slot">
+                <div class="titre-dd">
+                  <h2>Stade 4</h2>
+                </div>
+                <div class="img-dd">
+                  <label class="img-input" for="femelle_couleur_ebeneindigo"
+                    ><img src="image/dindeebeneindigo.png" /><input
+                      id="femelle_couleur_ebeneindigo"
+                      type="radio"
+                      name="couleurfemelle"
+                      value="ebeneindigo"
+                  /></label>
+                </div>
+                <div class="input-dd"></div>
+              </div>
+
+              <div class="container__3slot">
+                <div class="titre-dd">
+                  <h2>Stade 5</h2>
+                </div>
+                <div class="img-dd">
+                  <label class="img-input" for="femelle_couleur_pourpre"
+                    ><img src="image/dindepourpre.png" /><input
+                      id="femelle_couleur_pourpre"
+                      type="radio"
+                      name="couleurfemelle"
+                      value="pourpre"
+                  /></label>
+                  <label class="img-input" for="femelle_couleur_orchidee"
+                    ><img src="image/dindeorchidee.png" /><input
+                      id="femelle_couleur_orchidee"
+                      type="radio"
+                      name="couleurfemelle"
+                      value="orchidee"
+                  /></label>
+                </div>
+                <div class="input-dd"></div>
+              </div>
+
+              <div class="container__3slot">
+                <div class="titre-dd">
+                  <h2>Stade 6</h2>
+                </div>
+                <div class="img-dd">
+                  <label class="img-input" for="femelle_couleur_ebeneorchidee"
+                    ><img src="image/dindeebeneorchidee.png" /><input
+                      type="radio"
+                      name="couleurfemelle"
+                      value="ebeneorchidee"
+                      id="femelle_couleur_ebeneorchidee"
+                  /></label>
+                  <label class="img-input" for="femelle_couleur_indigopourpre"
+                    ><img src="image/dindeindigopourpre.png" /><input
+                      type="radio"
+                      name="couleurfemelle"
+                      value="indigopourpre"
+                      id="femelle_couleur_indigopourpre"
+                  /></label>
+                  <label class="img-input" for="femelle_couleur_pourpreorchidee"
+                    ><img src="image/dindepourpreorchidee.png" /><input
+                      type="radio"
+                      name="couleurfemelle"
+                      value="pourpreorchidee"
+                      id="femelle_couleur_pourpreorchidee"
+                  /></label>
+                </div>
+                <div class="input-dd"></div>
+              </div>
+
+              <div class="container__3slot">
+                <div class="titre-dd">
+                  <h2>Stade 7</h2>
+                </div>
+                <div class="img-dd">
+                  <label class="img-input" for="femelle_couleur_turquoise"
+                    ><img src="image/dindeturquoise.png" /><input
+                      id="femelle_couleur_turquoise"
+                      type="radio"
+                      name="couleurfemelle"
+                      value="turquoise"
+                  /></label>
+                  <label class="img-input" for="femelle_couleur_ivoire"
+                    ><img src="image/dindeivoire.png" /><input
+                      id="femelle_couleur_ivoire"
+                      type="radio"
+                      name="couleurfemelle"
+                      value="ivoire"
+                  /></label>
+                </div>
+                <div class="input-dd"></div>
+              </div>
+
+              <div class="container__3slot">
+                <div class="titre-dd">
+                  <h2>Stade 8</h2>
+                </div>
+                <div class="img-dd">
+                  <label
+                    class="img-input"
+                    for="femelle_couleur_orchideeturquoise"
+                    ><img src="image/dindeorchideeturquoise.png" /><input
+                      type="radio"
+                      name="couleurfemelle"
+                      value="orchideeturquoise"
+                      id="femelle_couleur_orchideeturquoise"
+                  /></label>
+                  <label class="img-input" for="femelle_couleur_ivoirepourpre"
+                    ><img src="image/dindeivoirepourpre.png" /><input
+                      type="radio"
+                      name="couleurfemelle"
+                      value="ivoirepourpre"
+                      id="femelle_couleur_ivoirepourpre"
+                  /></label>
+                  <label class="img-input" for="femelle_couleur_ivoireturquoise"
+                    ><img src="image/dindeivoireturquoise.png" /><input
+                      type="radio"
+                      name="couleurfemelle"
+                      value="ivoireturquoise"
+                      id="femelle_couleur_ivoireturquoise"
+                  /></label>
+                </div>
+                <div class="input-dd"></div>
+              </div>
+
+              <div class="container__3slot">
+                <div class="titre-dd">
+                  <h2>Stade 9</h2>
+                </div>
+                <div class="img-dd">
+                  <label class="img-input" for="femelle_couleur_emeraude"
+                    ><img src="image/dindeemeraude.png" /><input
+                      id="femelle_couleur_emeraude"
+                      type="radio"
+                      name="couleurfemelle"
+                      value="emeraude"
+                  /></label>
+                  <label class="img-input" for="femelle_couleur_prune"
+                    ><img src="image/dindeprunes.png" /><input
+                      id="femelle_couleur_prune"
+                      type="radio"
+                      name="couleurfemelle"
+                      value="prune"
+                  /></label>
+                </div>
+                <div class="input-dd"></div>
+              </div>
+            </div>
+          </div>
+          <div class="elevage__formulaire-bas">
+            <section id="section-submit">
+              <input class="btn" type="submit" name="submit" value="Ajouter" />
+              <input
+                class="btn"
+                type="submit"
+                name="effacer"
+                value="Réinitialiser"
+              />
+            </section>
+          </div>
+        </div>
+      </form>
+    </main>
+
+    <aside class="settings">
+      <button class="settings__close btn" aria-label="Fermer" type="button">
+        &Cross;
+      </button>
+      <h2 class="settings__title">Configuration</h2>
+      <div class="settings__dark">
+        <button
+          id="theme-switch"
+          class="btn"
+          type="button"
+          aria-label="Changer le thème"
+        >
+          <i class="icon-moon"></i>
+        </button>
+        <h3>Theme dark / light</h3>
+      </div>
+      <div class="settings__color">
+        <button
+          id="theme-green"
+          class="theme-button"
+          type="button"
+          aria-label="Changer la couleur du thème"
+        ></button>
+        <button
+          id="theme-red"
+          class="theme-button"
+          type="button"
+          aria-label="Changer la couleur du thème"
+        ></button>
+        <button
+          id="theme-blue"
+          class="theme-button"
+          type="button"
+          aria-label="Changer la couleur du thème"
+        ></button>
+        <button
+          id="theme-purple"
+          class="theme-button"
+          type="button"
+          aria-label="Changer la couleur du thème"
+        ></button>
+        <button
+          id="theme-turquoise"
+          class="theme-button"
+          type="button"
+          aria-label="Changer la couleur du thème"
+        ></button>
+        <button
+          id="theme-orange"
+          class="theme-button"
+          type="button"
+          aria-label="Changer la couleur du thème"
+        ></button>
+      </div>
+      <div class="settings__save"><a class="btn" href="">Sauvegarder</a></div>
+    </aside>
+
+    <footer class="footer">
+      <div class="container">
+        <p>Crée par SAURET Mathieu</p>
+        <a class="footer__link"> <p>https://github.com/SAURETMathieu</p></a>
+      </div>
+    </footer>
+    <script src="../js/settings.js"></script>
+  </body>
+</html>

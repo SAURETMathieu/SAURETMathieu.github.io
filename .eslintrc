@@ -1,0 +1,27 @@
+{
+    "env": {
+      "node": true,
+      "es6": true,
+      "mocha": true,
+      "browser": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 2020
+    },
+    "extends": "eslint:recommended",
+    "rules": {
+      "indent": ["error", 2],
+      "semi": ["error", "always"],
+      "quotes": "error",
+      "spaced-comment": "error",
+      "no-trailing-spaces": "error",
+      "space-before-function-paren": ["error", {
+          "named": "never",
+          "anonymous": "always"
+        }],
+      "no-multi-spaces": "error",
+      "func-call-spacing": ["error", "never"],
+      "space-before-blocks": "error",
+      "no-var": 1
+    }
+}

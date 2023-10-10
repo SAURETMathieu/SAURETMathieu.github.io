@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Accueil</title>
-    <link rel="stylesheet" href="../css/reset.css" />
-    <link rel="stylesheet" href="../css/fonts.css" />
-    <link rel="stylesheet" href="../css/style.css" />
+    <title>Jeux</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/memory.css" />
     <link rel="shortcut icon" href="image/dd-icone.webp" type="image/x-icon" />
     <link
       rel="stylesheet"
@@ -21,7 +22,7 @@
             <div class="header__flex">
               <a class="logo" href="">
                 <img class="logo__image" src="image/dd-icone.webp" alt="" />
-                <span class="logo__title">Accueil</span>
+                <span class="logo__title">Jeux</span>
               </a>
               <div class="menu">
                 <a class="menu__item" href="https://devdocs.io/javascript/"
@@ -80,19 +81,19 @@
         <div class="header__part">
           <div class="container">
             <div class="submenu">
-              <a class="submenu__item submenu__item--current" href="index.html"
-                >Accueil</a
-              >
+              <a class="submenu__item" href="index.html">Accueil</a>
               <a class="submenu__item" href="tables.html">Roulette</a>
               <a class="submenu__item" href="tableau.html">Tableaux</a>
               <a class="submenu__item" href="elevage.html">Gestion</a>
               <a class="submenu__item" href="elevage.html">Elevage</a>
               <a class="submenu__item" href="trading.html">Crypto</a>
-              <a class="submenu__item" href="./oclock/oclock.html">O'clock</a>
+              <a class="submenu__item" href="etables.html">O'clock</a>
               <a class="submenu__item" href="htmldoc.html">HTML</a>
               <a class="submenu__item" href="cssdoc.html">CSS</a>
               <a class="submenu__item" href="jsdoc.html">JS</a>
-              <a class="submenu__item" href="games.html">Jeux</a>
+              <a class="submenu__item submenu__item--current" href="games.html"
+                >Jeux</a
+              >
               <a class="submenu__item" href="games.html">Projets</a>
             </div>
           </div>
@@ -101,129 +102,65 @@
     </header>
 
     <main class="container">
-      <div class="content">
-        <section class="slider">
-          <button class="btn slider__btn" type="button" aria-label="Précédent">
-            &lt;
-          </button>
-          <button class="btn slider__btn" type="button" aria-label="Suivant">
-            &gt;
-          </button>
-        </section>
-
-        <section class="segment">
-          <h2 class="segment__title">Menu</h2>
-          <div class="cards">
-            <article class="card">
-              <div class="card__content">
-                <a href=""><img class="card__image" src="./image/trading.png" alt="" /></a>
-                <h3 class="card__title">Crypto</h3>
-                <p class="card__desc">Gestionnaire de portefeuille crypto</p>
-              </div>
-              <div class="card__action">
-                <a class="btn" href="">Continuer</a>
-              </div>
-            </article>
-            <article class="card">
-              <div class="card__content">
-                <a href=""><img class="card__image" src="./image/roulette.jpg" alt="" /></a>
-                <h3 class="card__title">Roulette</h3>
-                <p class="card__desc">
-                  Outil d'analyse de croupier pour le jeu de la roulette dans
-                  les casinos en ligne
-                </p>
-              </div>
-              <div class="card__action">
-                <a class="btn" href="">Continuer</a>
-              </div>
-            </article>
-            <article class="card">
-              <div class="card__content">
-                <a href=""><img
-                  class="card__image"
-                  src="./image/elevageaccueil.png"
-                  alt=""
-                />
-                <h3 class="card__title">Dofus</h3>
-                <p class="card__desc">
-                  Gestionnaire d'étable et d'élevage pour le jeu Dofus
-                </p>
-              </div>
-              <div class="card__action">
-                <a class="btn" href="elevage.html">Continuer</a>
-              </div>
-            </article>
-            <article class="card">
-              <div class="card__content">
-                <a href=""><img class="card__image" src="./image/htmllogo.png" alt="" /></a>
-                <h3 class="card__title">HTML</h3>
-                <p class="card__desc">Base de données HTML</p>
-              </div>
-              <div class="card__action">
-                <a class="btn" href="">Continuer</a>
-              </div>
-            </article>
-            <article class="card">
-              <div class="card__content">
-                <a href=""><img class="card__image" src="./image/csslogo.png" alt="" /></a>
-                <h3 class="card__title">CSS</h3>
-                <p class="card__desc">Base de données CSS</p>
-              </div>
-              <div class="card__action">
-                <a class="btn" href="">Continuer</a>
-              </div>
-            </article>
-            <article class="card">
-              <div class="card__content">
-                <a href=""><img class="card__image" src="./image/jslogo.png" alt="" /></a>
-                <h3 class="card__title">JavaScript</h3>
-                <p class="card__desc">Base de données JavaScript</p>
-              </div>
-              <div class="card__action">
-                <a class="btn" href="">Continuer</a>
-              </div>
-            </article>
-            <article class="card">
-              <div class="card__content">
-                <a href=""><img class="card__image" src="./image/bddlogo.png" alt="" /></a>
-                <h3 class="card__title">Base de Donnée</h3>
-                <p class="card__desc">Gestionnaire de base de données</p>
-              </div>
-              <div class="card__action">
-                <a class="btn" href="">Continuer</a>
-              </div>
-            </article>
-            <article class="card">
-              <div class="card__content">
-                <a href=""><img class="card__image" src="./image/oclock.png" alt="" /></a>
-                <h3 class="card__title">O'clock</h3>
-                <p class="card__desc">
-                  Listes des challenges et des cours pour chaques saisons de la formation O'clock
-                </p>
-              </div>
-              <div class="card__action">
-                <a class="btn" href="">Continuer</a>
-              </div>
-            </article>
-            <article class="card">
-              <div class="card__content">
-                <a href=""><img
-                  class="card__image"
-                  src="./image/blackjackaccueil.png"
-                  alt=""
-                />
-                <h3 class="card__title">BlackJack</h3>
-                <p class="card__desc">
-                  Outil de calcul et analyse pour le jeu de casino BlackJack
-                </p>
-              </div>
-              <div class="card__action">
-                <a class="btn" href="">Continuer</a>
-              </div>
-            </article>
-          </div>
-        </section>
+      <h1>Jeux du Memory</h1>
+      <div class="container__rules">
+        <h2>Règles</h2>
+        <p class="container__rules-titre">
+          Il faut mémoriser et trouver toutes les paires de cartes en faisant le moins d'erreurs possibles.
+        </p>
+        <ul class="container_rules-list">
+          <li class="container__rules-details">
+            Mémorisez toutes les cartes dans le temps imparti.(3sec,10sec,30sec,60sec,120sec)
+          </li>
+          <li class="container__rules-details">
+            Une fois le temps imparti, toutes les cartes se retournent. Vous devrez alors retrouver chaque paires en évitant au maximum de vous tromper.
+          </li>
+          <li class="container__rules-details">
+            Si les 2 cartes sont identiques, vous avez trouvé une paire.
+          </li>
+          <li class="container__rules-details">
+            Si elles sont différentes, les 2 cartes se retournent
+          </li>
+          <li class="container__rules-details">
+            Recommencer jusqu'à avoir trouvé toutes les paires
+          </li>
+        </ul>
       </div>
+      <div class="parameters">
+        <div class="parameters__nb-pairs">
+          <p class="parameters__nb-pairs-text">Nombre de paires (max 30)</p>
+          <input
+            class="parameters__nb-pairs-input"
+            type="number"
+            name="nbPairs"
+            value="10"
+          />
+        </div>
+        <div class="parameters__btn">
+          <input class="btn run" type="submit" name="run" value="Run" />
+          <input
+            class="btn try"
+            type="submit"
+            name="try"
+            value="Tentatives :"
+          />
+        </div>
+      </div>
+      <div class="parameters__difficulty">
+          Difficulté : 
+          <label for="3sec"><input class="difficulty" type="radio" id="3sec" name="difficulty" value=3 checked/>3sec</label>
+          <label for="10sec"><input class="difficulty" type="radio" id="10sec" name="difficulty" value=10 />10sec</label>
+          <label for="30sec"><input class="difficulty" type="radio" id="30sec" name="difficulty" value=30 />30sec</label>
+          <label for="60sec"><input class="difficulty" type="radio" id="60sec" name="difficulty" value=60 />60sec</label>
+          <label for="120sec"><input class="difficulty" type="radio" id="120sec" name="difficulty" value=120 />120sec</label>
+      </div>
+      <section class="container__card">
+        <div class="panel-winning hidden">
+          <p class="winning-texte">Bravo vous avez gagné</p>
+          <p class="winning-texte t2">Vous avez mi 0 tentatives</p>
+          <input class="rerun" type="submit" name="rerun" value="Rejouer" />
+        </div>
+      </section>
     </main>
 
     <aside class="settings">
@@ -290,6 +227,6 @@
       </div>
     </footer>
     <script src="../js/settings.js"></script>
-    <script src="../js/slider.js"></script>
+    <script src="../js/memory2.js"></script>
   </body>
 </html>
