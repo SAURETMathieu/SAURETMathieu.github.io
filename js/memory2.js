@@ -4,6 +4,8 @@ const app = {
   chronoDown: false,
   cardSound: new Audio("./son/carte.mp3"),
   cardMixSound: new Audio("./son/melangercarte.mp3"),
+  successSound: new Audio("./son/succes.mp3"),
+  winSound: new Audio("./son/applause.mp3"),
   rectos: [],
   number: 30,
   nbCardReturn: 0,
@@ -109,6 +111,8 @@ const app = {
             const returnedCard = document.querySelectorAll(".selected");
             setTimeout(() => {
               if (app.verifyPair()) {
+                app.successSound.playbackRate = 2;
+                app.successSound.play();
                 returnedCard[0].classList.remove("verso");
                 returnedCard[1].classList.remove("verso");
                 returnedCard[0].classList.remove("recto");
@@ -131,6 +135,8 @@ const app = {
                     imgSelected[0].src = "../image/memory/verso.png";
                     imgSelected[1].src = "../image/memory/verso.png";
                   }, 200);
+                  app.cardSound.playbackRate = 7;
+                  app.cardSound.play();
                 }, 200);
                 app.try++;
                 const tryButton = document.querySelector(".try");
@@ -229,7 +235,7 @@ const app = {
         });
         runBtn.classList.remove("avoid-clicks");
         app.chronoDown = true;
-      }, (app.difficulty) * 1000);
+      }, app.difficulty * 1000);
     });
   },
   deleteAllElement() {
@@ -251,6 +257,11 @@ const app = {
       const winPanel = document.querySelector(".panel-winning");
       winPanel.classList.remove("hidden");
       const nbTry = document.querySelector(".t2");
+      app.winSound.play();
+      setTimeout(() => {
+        app.winSound.pause();
+        app.winSound.currentTime = 0;
+      }, 5000);
       nbTry.innerHTML = `<p class="winning-texte t2">Vous avez fait ${app.try} erreurs</p>`;
     }
   },
@@ -263,8 +274,6 @@ const app = {
       app.number = nbButton.value * 2;
       if (app.number < 0) app.number = 0;
       if (app.number > 60) app.number = 60;
-      app.deleteAllElement();
-      app.init();
     });
   },
   chrono() {

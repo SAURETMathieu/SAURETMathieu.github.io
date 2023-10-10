@@ -1,6 +1,8 @@
 const app = {
   cardSound: new Audio("./son/carte.mp3"),
   cardMixSound: new Audio("./son/melangercarte.mp3"),
+  successSound: new Audio("./son/succes.mp3"),
+  winSound: new Audio("./son/applause.mp3"),
   rectos: [],
   number: 30,
   nbCardReturn: 0,
@@ -109,6 +111,8 @@ const app = {
             const returnedCard = document.querySelectorAll(".selected");
             setTimeout(() => {
               if (app.verifyPair()) {
+                app.successSound.playbackRate = 2;
+                app.successSound.play();
                 returnedCard[0].classList.remove("verso");
                 returnedCard[1].classList.remove("verso");
                 returnedCard[0].classList.remove("recto");
@@ -131,6 +135,8 @@ const app = {
                     imgSelected[0].src = "../image/memory/verso.png";
                     imgSelected[1].src = "../image/memory/verso.png";
                   }, 200);
+                  app.cardSound.playbackRate = 7;
+                  app.cardSound.play();
                 }, 200);
               }
             }, 800);
@@ -161,29 +167,24 @@ const app = {
       if (app.number < 11) {
         element.style.width = `${width / 7}px`;
         element.style.height = `${(width / 7) * 1.5}px`;
-      }
-      else if (app.number < 21 && app.number > 10) {
+      } else if (app.number < 21 && app.number > 10) {
         element.style.width = `${width / 8}px`;
         element.style.height = `${(width / 8) * 1.5}px`;
-      }
-      else if (app.number < 31 && app.number > 20) {
+      } else if (app.number < 31 && app.number > 20) {
         element.style.width = `${width / 9}px`;
         element.style.height = `${(width / 9) * 1.5}px`;
-      }
-      else if (app.number < 41 && app.number > 30) {
+      } else if (app.number < 41 && app.number > 30) {
         element.style.width = `${width / 10}px`;
         element.style.height = `${(width / 10) * 1.5}px`;
-      }
-      else if (app.number < 51 && app.number > 40) {
+      } else if (app.number < 51 && app.number > 40) {
         element.style.width = `${width / 11}px`;
         element.style.height = `${(width / 11) * 1.5}px`;
-      }
-      else if (app.number < 61 && app.number > 50) {
+      } else if (app.number < 61 && app.number > 50) {
         element.style.width = `${width / 13}px`;
         element.style.height = `${(width / 13) * 1.5}px`;
-      }
-      else{
-        
+      } else {
+        element.style.width = "0px";
+        element.style.height = "0px";
       }
     });
   },
@@ -193,10 +194,8 @@ const app = {
       const nbButton = document.querySelector(".parameters__nb-pairs-input");
       runButton.value = "Re-run";
       app.number = nbButton.value * 2;
-      if(app.number < 0)
-      app.number=0;
-      if(app.number > 60)
-      app.number=60;   
+      if (app.number < 0) app.number = 0;
+      if (app.number > 60) app.number = 60;
       app.cardMixSound.play();
       app.deleteAllElement();
       app.init();
@@ -222,6 +221,11 @@ const app = {
       const winPanel = document.querySelector(".panel-winning");
       winPanel.classList.remove("hidden");
       const nbTry = document.querySelector(".t2");
+      app.winSound.play();
+      setTimeout(() => {
+        app.winSound.pause();
+        app.winSound.currentTime = 0;
+      }, 5000);
       nbTry.innerHTML = `<p class="winning-texte t2">Vous avez mi ${app.try} tentatives</p>`;
     }
   },
@@ -232,10 +236,8 @@ const app = {
       winPanel.classList.add("hidden");
       const nbButton = document.querySelector(".parameters__nb-pairs-input");
       app.number = nbButton.value * 2;
-      if(app.number < 0)
-      app.number=0;
-      if(app.number > 60)
-      app.number=60;
+      if (app.number < 0) app.number = 0;
+      if (app.number > 60) app.number = 60;
       app.deleteAllElement();
       app.init();
     });
