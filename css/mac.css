@@ -1,13 +1,45 @@
 @font-face {
-  font-family: "Speedee";
+  font-family: "Speedee_Bold";
   src: url("../fonts/SpeedeeBold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Speedee_Regular";
+  src: url("../fonts/speedee_regular.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Speedee_Bold_Regular";
+  src: url("../fonts/speedee_bold_regular.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Speedee_Condensed_Bold";
+  src: url("../fonts/speedee_condensed_bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Speedee_Italic";
+  src: url("../fonts/speedee_italic.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Speedee_Regular", sans-serif;
 }
 
 main {
@@ -23,7 +55,7 @@ main {
 }
 
 .description {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: #2d2d2d;
   padding: 0.6rem 0;
   line-height: 1.3;
@@ -32,9 +64,9 @@ main {
 
 .title {
   font-size: 1.5rem;
-  font-weight: 1000;
-  font-family: "Speedee", "Roboto", sans-serif;
+  font-weight: 900;
   color: #333333;
+  font-family: "Speedee_Bold", sans-serif;
 }
 
 header {
@@ -78,7 +110,7 @@ header {
 
 .validity__date {
   font-weight: 1000;
-  font-family: "Speedee", "Roboto", sans-serif;
+  font-family: "Speedee_Bold", sans-serif;
 }
 
 .card__header {
@@ -93,7 +125,7 @@ header {
 
 .fullname {
   font-weight: 1000;
-  font-family: "Speedee", "Roboto", sans-serif;
+  font-family: "Speedee_Bold", sans-serif;
 }
 
 .card__main {
@@ -107,7 +139,7 @@ header {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
-  font-size: 1rem;
+  font-size: 0.9rem;
   width: 100%;
 }
 
@@ -133,13 +165,13 @@ header {
   font-size: 1rem;
   font-weight: 9000;
   color: #282828;
-  font-family: "Speedee", "Roboto", sans-serif;
+  font-family: "Speedee_Bold", sans-serif;
 }
 
 .photo {
   padding: 0.2rem;
-  width: 4.5rem;
-  height: 4.5rem;
+  width: 4.3rem;
+  height: 4.3rem;
   border-radius: 50%;
   border: solid 1px #c7c7c7;
 }
@@ -184,7 +216,7 @@ header {
 .alert__text {
   padding: 0.2rem;
   width: 85%;
-  font-size: 0.85rem;
+  font-size: 0.855rem;
   font-weight: 400;
   color: #333333;
   line-height: 1.3;
