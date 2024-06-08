@@ -1,0 +1,184 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+main{
+  background: #e4e5eb;
+  height: 100vh;
+  width:100vw;
+  padding:1.5rem;
+}
+
+.chevron{
+  font-size:1.6rem;
+  color:#2D2D2D
+}
+
+.description{
+  font-size: 0.8rem;
+  color:#2D2D2D;
+  padding:0.6rem 0;
+  line-height: 1.3;
+  font-weight:300;
+}
+
+.title{
+  font-size: 1.5rem;
+  font-weight:700;
+  color:#333333;
+}
+
+header{
+  padding: 0 0.5rem 1rem 0;
+  font-size: 1rem;
+  font-weight:300;
+  display:flex;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+  align-items:center;
+  color:#333333;
+}
+
+.resto{
+  color:#666666;
+}
+
+.logo{
+  width:1.3rem;
+  height:1.3rem;
+  border-radius:0.5rem;
+}
+
+.card{
+  width:97%;
+  margin:1rem auto;
+  background:#FEFEFE;
+  border:1px solid #91919169;
+  border-radius: 0.7rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.350);
+}
+
+.validity{
+  background:#138C63;
+  color:#fff;
+  padding:0.3rem;
+  border-radius:0.3rem;
+  display:flex;
+  justify-content:space-between;
+}
+
+.validity__date{
+  font-weight:1000;
+}
+
+.card__header{
+  display:flex;
+  gap: 1rem;
+  align-items:center;
+  justify-content: space-between;
+  color:#333333;
+  border-bottom: solid 1px #d1d1d1;
+  padding:0.4rem 0.6rem;
+}
+
+.fullname{
+  font-weight:1000;
+}
+
+.card__main{
+  padding:0.6rem;
+  display:flex;
+  gap: 1rem;
+  width:100%;
+  padding-top:0.9rem;
+}
+
+.card__main_infos{
+  display:flex;
+  flex-direction:column;
+  gap:0.5rem;
+  font-size:0.8rem;
+  width:100%;
+}
+
+.card__main_infos div{
+  display:flex;
+  justify-content:space-between;
+  width:100%;
+}
+
+.card__header_title{
+  display: flex;
+  gap: 0.5rem;
+  align-items:center;
+}
+
+.card__title_resto{
+  font-weight:400;
+  font-size: 0.8rem;
+}
+
+.card__title{
+  font-size: 0.8rem;
+  font-weight: 900;
+  color:#282828;
+}
+
+.photo{
+  padding:0.2rem;
+  width:3.5rem;
+  height:3.5rem;
+  border-radius:50%;
+  border: solid 1px #C7C7C7;
+}
+
+.card__footer{
+  padding: 1rem;
+  padding-bottom:0.8rem;
+  display:flex;
+  justify-content:center;
+  width:100%;
+  color: #666666;
+  font-size:0.65rem;
+}
+
+.alert{
+  display:flex;
+  gap:0.5rem;
+
+}
+
+.info-icon{
+  padding:0.2rem;
+  border: solid 1px #000000;
+  border-radius:100%;
+  height:1rem;
+  width:2.5rem;
+  position:relative;
+}
+
+.info-icon span{
+  position:absolute;
+}
+
+.relative{
+  position:relative;
+}
+
+.absolute{
+  position:absolute;
+  left:25%
+}
+
+.alert__text{
+  padding:0.2rem;
+  width:85%;
+  font-size:0.7rem;
+  font-weight:400;
+  color:#333333;
+  line-height:1.3;
+}
+
+.svg{
+  padding-top:0.2rem;
+}

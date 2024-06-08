@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mac</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/mac.css" />
+    <link rel="shortcut icon" href="image/logo.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <header>
+        <i class="fa-solid fa-chevron-left chevron"></i>
+        <span> Ma carte McBooster</span>
+      </header>
+      <h1 class="title">Votre carte</h1>
+      <p class="description">
+        Présentez cette carte à un équipier pour profiter des avantages
+        McBooster.
+      </p>
+      <div class="card">
+        <div class="card__header">
+          <div class="card__header_title">
+            <img
+              class="logo"
+              src="../image/logoplus.png"
+              alt="Logo McBooster"
+            />
+            <span class="card__title">McBooster</span>
+          </div>
+          <span class="card__title_resto">RESTAURANT</span>
+        </div>
+        <div class="card__main">
+          <img class="photo" src="../image/pp.png" alt="Code-barres" />
+          <div class="card__main_infos">
+            <div>
+              <span>Nom</span>
+              <span class="fullname">SAURET</span>
+            </div>
+            <div>
+              <span>Prénom</span>
+              <span class="fullname">MATHIEU</span>
+            </div>
+            <div class="validity">
+              <span>Validité</span>
+              <span class="validity__date">31 aout 2023</span>
+            </div>
+          </div>
+        </div>
+        <div class="card__footer">CARTE STRICTEMENT PERSONNELLE</div>
+      </div>
+      <div class="alert">
+        <div class="svg">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-info"
+          >
+            <circle cx="12" cy="12" r="10" />
+            <path d="M12 16v-4" />
+            <path d="M12 8h.01" />
+          </svg>
+        </div>
+        <div class="alert__text">
+          <p>
+            Pour bénéficier de vos avantages McBooster, le téléchargement d'une
+            photo d'identité est obligatoire. &Agrave; noter que vous ne pourrez
+            télécharger votre photo qu'une seule fois.
+          </p>
+          <p>
+            Passée cette étape, la modification ou la suppression ne seront plus
+            possible.
+          </p>
+        </div>
+      </div>
+    </main>
+    <script>
+      const mois = [
+        "jan.",
+        "fév.",
+        "mars",
+        "avr.",
+        "mai",
+        "juin",
+        "jui.",
+        "août",
+        "sep.",
+        "oct.",
+        "nov.",
+        "déc.",
+      ];
+
+      const aujourdHui = new Date();
+      const jour = aujourdHui.getDate();
+      const moisIndex = aujourdHui.getMonth();
+      const annee = aujourdHui.getFullYear();
+
+      const dateFormatee = `${jour} ${mois[moisIndex]} ${annee}`;
+
+      document.querySelector(".validity__date").textContent = dateFormatee;
+    </script>
+  </body>
+</html>
